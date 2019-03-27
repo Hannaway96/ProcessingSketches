@@ -1,4 +1,5 @@
 class Symbol {
+    
     constructor(x, y, speed, size) {
         this.x = x;
         this.y = y;

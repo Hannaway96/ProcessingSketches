@@ -1,6 +1,6 @@
 
 let streams = [];
-let symbolSize = 18;
+let symbolSize = 24;
 
 function setup() {
     let x = 0
@@ -20,4 +20,3 @@ function draw() {
     } */
     streams.forEach((stream) => stream.show());
 }
-
