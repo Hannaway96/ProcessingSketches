@@ -1,7 +1,6 @@
 class Brick {
     constructor(points) {
-        this.x = width / 2 + 200;
-        this.y = height / 2;
+        this.pos = createVector(random(100, width - 100), random(100, height - 100));
         this.points = points;
         this.r = random(10, 50);
     }
@@ -15,12 +14,15 @@ class Brick {
             let sy = y + sin(i) * radius;
             vertex(sx, sy);
         }
-        endShape();
+        endShape(CLOSE);
     }
 
+    broke() {
+        return (this.r < 10);
+    }
 
     show() {
         fill(255);
-        this.createPolygon(this.x, this.y, this.r, this.points);
+        this.createPolygon(this.pos.x, this.pos.y, this.r, this.points);
     }
 }
