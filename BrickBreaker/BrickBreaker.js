@@ -6,14 +6,14 @@ let paddle;
 
 function setup() {
     createCanvas(600, 600);
+
     ball = new Ball();
+    paddle = new Paddle();
 
     for (let i = 0; i < 10; i++) {
         brick = new Brick(floor(random(4, 7)));
         bricks.push(brick);
     }
-
-    paddle = new Paddle();
 }
 
 function draw() {
